@@ -1,0 +1,96 @@
+<html>
+
+<head>
+	<title>Shrek Matching Game</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="logic.js"></script>
+	<link rel="stylesheet" href="style2.css">
+
+	<style>
+		
+		/* Add your css here */
+        body {
+		  background-image: url('shrekswamp.jpeg');
+		  background-size: 150%;
+		  text-align: center;	
+		}
+
+		h1 {
+		  font-family: "sniglet", cursive;
+		  color: green;
+		}
+
+		#game-wrapper {
+			margin: auto;
+			margin-top: 40px;
+			padding: 20px;
+			size: 760px;
+			background-color: white;
+			border-radius: 20px;
+			border: 5px solid green;
+		}
+
+		.card {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			backface-visibility: hidden;
+		}
+
+		.card_front {
+			background: linear-gradient(green, black);
+		}
+
+		.card_back {
+			background-color: white;
+			transform: rotateY(180deg);
+		}
+
+		.card_back img {
+			width: 80px;
+			height: 80px;
+			margin-top: 10px;
+		}
+
+		.is-flipped {
+			transform: rotateY(180deg);
+		}
+
+		a {
+			font-family: "sniglet", cursive;
+			background-color: green;
+			display: block;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 2px solid green;
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+<!-- Add your html here -->
+
+  <div id="game-wrapper">
+	  <h1>Shrek Matching Game</h1>
+	  <div id="match-grid"></div>
+	  <a onclick="start()">GET OUT OF MY SWAMP!</a>
+
+  </div>
+
+
+	<script>
+		/* Add the images in following array */
+		var images = ["shrek.png", "donkey.png", "puss.png"];
+
+		start();
+
+	</script>
+</body>
+
+</html>
